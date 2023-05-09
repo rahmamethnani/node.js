@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <textarea id="chat"></textarea>
+    <button onclick="submit()">verifier</button>
+    <p id="result"></p>
+    <script>
+        function submit() {
+            var ch = document.getElementById("chat").value;
+            var v = "aeiouy"
+            var voyelles = 0
+            for (var i = 0; i < ch.length; i++) {
+                for (var j = 0; j < v.length; j++) {
+                    if (ch[i] === v[j]) {
+                        voyelles+= 1
+                    }
+             document.getElementById("result").innerHTML="nbre de voyelle est"+voyelles
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

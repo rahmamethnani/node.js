@@ -1,0 +1,86 @@
+const productModel=require("../Model/productModel")
+module.exports={
+    addProduct:async(req,res)=>{
+        const product=new productModel(req.body)
+        await product.save(req.body,(err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+            }else{
+
+                res.status(201).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    getAll:async(req,res)=>{
+        await productModel.find().exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",err
+                })
+            }else{
+                res.status(201).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    update:async(req,res)=>{
+        productModel.findByIdAndUpdate(req.params.id,req.body).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",err
+                })
+            }else{
+                res.status(201).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    delete:async(req,res)=>{
+        productModel.findByIdAndDelete(req.params.id).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",err
+                })
+            }else{
+                res.status(201).json({
+                    sucess:true,
+                    message:"delete",
+                    
+                })
+            }
+        })
+    },
+    getById:async(req,res)=>{
+        productModel.findById(req.params.id).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",err
+                })
+            }else{
+                res.status(201).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    }
+}

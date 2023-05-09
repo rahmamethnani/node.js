@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function calculabcd(x){
+        var a=x%10;
+        var b=parseInt((x/10)%10);
+        var c=parseInt((x/100)%10);
+        var d=parseInt(x/1000);
+        result=(a*1000)+(b*100)+(c*10)+d;
+        alert(result)
+    }
+    calculabcd(1234);
+</script>
+</body>
+</html>

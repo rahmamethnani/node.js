@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h1 id=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="color_1">text</h1>
+    <h2 id="color_2">text1</h2>
+    <p class="para1">bonjour</p>
+    <p class="para2">cat</p>
+    <script>
+        /*elementbyid*/
+       const element=document.getElementById("color_1");
+       element.style.color="red";
+       element.style.fontSize="100px";
+       element.style.fontFamily="arial";
+       const element=document.getElementById("color_2");
+       element.style.color="green";
+        /*elementbyclassname*/
+        const element=document.getElementsByClassName("para1");
+        element[0].innerHTML="hello";
+        element[1].innerHTML="how are you";
+        /*elementbytagname*/
+        const element=document.getElementsByTagName("para1");
+        element[0].innerHTML="bonjour";
+        element[1].innerHTML="bonsoir";
+        
+    </script>
+</body>
+</html>

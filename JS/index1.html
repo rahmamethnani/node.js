@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var X=parseInt(prompt("Entrer le nombre d'etage"));
+        if (X===0){
+            alert("RC") 
+        
+        }
+        else if (X>=1 && X<=20){
+            alert("Direction " + X + " etage")
+        }
+        else {
+            alert("Error")
+        }
+
+/******************age**************/
+
+        var a=prompt("Entrer le age");
+        if (a>=1 && a<=18){
+            alert("n'est pas encore major")
+        }
+        else if (a>=18 && a<=50 ) {
+            alert("Major")
+            
+        }
+        else if ( a>=50 && a<=60 ) {
+            alert("senior")
+        }
+        else if (a>=60 && a<=80){
+            alert("retraite")
+        }
+/*****************switch*********************/
+        
+        var a=prompt("Entrer le age")
+        switch (true)
+          { 
+            case (a>=1 && a<=18):
+            alert("n'est pas encore major");
+            break;
+            case (a>=18 && a<=50 ):
+            alert("Major");
+            break;
+            case( a>=50 && a<=60 ) :
+            alert("senior");
+            break;
+            case(a>=60 && a<=80):
+            alert("retraite");
+            break;
+            }
+/***************example  FOR************/
+
+           for (var i=1 ; i<=5 ; i++ )
+           {
+            alert("interactionn N°" + i)
+           }
+/*************** exercice for    ************/
+           
+              
+               for  ( var name , listname =""; ; ) {
+              name=prompt("Donner votre prénom") ;      
+              if (name != "") {
+                listname += name +" " ;                         /********* listname=listname+name*****/
+                  }
+             else  {
+                break;
+             }
+            } 
+            alert(listname)
+
+            /*********** il ya  des prénom*******/
+         
+            for  ( var i=0 , name , listname =""; ; i++ )  {
+              name=prompt("Donner votre prénom")  ;
+                   
+              if (name != "") {
+                listname += name +" " ;                         /********* listname=listname+name*****/
+                  }
+             else  {
+                break;
+             }
+            } 
+            alert(" il y a "  + i +  " name "  + listname )
+          
+
+            
+
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>

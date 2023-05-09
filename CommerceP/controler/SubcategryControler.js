@@ -1,0 +1,88 @@
+const SubcategoryModel=require("../Model/SubcategoryModel")
+module.exports={
+    addSubcategory:async(req,res)=>{
+        const subcategory=new SubcategoryModel(req.body)
+        await subcategory.save(req.body,(err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+            }else{
+                res.status(201).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    getAll:async(req,res)=>{
+        await SubcategoryModel.find().exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+            }else{
+                res.status(200).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    update:async(req,res)=>{
+        await SubcategoryModel.findByIdAndUpdate(req.params.id,req.body).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+            }else{
+                res.status(200).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                })
+            }
+        })
+    },
+    delete:async(req,res)=>{
+        SubcategoryModel.findByIdAndDelete(req.params.id).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+               }else{
+                res.status(200).json({
+                    sucess:true,
+                    message:"delete",
+                    
+                })}  
+        })
+    },
+    getById:async(req,res)=>{
+        SubcategoryModel.findById(req.params.id).exec((err,item)=>{
+            if(err){
+                res.status(400).json({
+                    sucess:false,
+                    message:"false",
+                    err
+                })
+               }else{
+                res.status(200).json({
+                    sucess:true,
+                    message:"true",
+                    data:item
+                    
+                })}  
+        })
+    }
+}

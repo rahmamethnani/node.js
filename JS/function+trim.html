@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ <!--  <h1 id="cat1">hallo</h1>
+  <button onclick="document.getElementById ('cat1').style.color='red'">login</button>
+  <script>
+    const element = document.getElementById("cat1");
+    element.style.color = "green";
+  </script>
+ -->
+
+<!-- 
+  <h1>Exercice1</h1>
+  <label>Entre la valeur de a</label>
+  <input id="cat2" type="text"></input><br><br>
+  <label1>Entrer la valeur de <b></b></label1>
+  <input id="cat3" type="text"></input><br><br>
+  <button id="btn" onclick="permetterAB()">permetter</button>
+  <p id="cat5"></p>
+  <script>
+    function permetterAB() {
+      var A = document.getElementById("cat2").value;
+      var B = document.getElementById("cat3").value;
+      var C = A;
+      A = B;
+      B = C;
+      document.getElementById("cat5").innerHTML =
+        'A=' + A + '<br> ' + 'B=' + B
+
+    }
+  </script>
+
+ -->
+
+<!--   <h1>EXERCICE2</h1>
+  <p>Donner un nom</p>
+  <input id="ch" type="text" placeholder="chaine carctere"></input>
+  <p>Extraire</p>
+  <input id="C" type="text" placeholder="caractere"></input>
+  <button id="btn1" onclick="Extraire()">valide</button>
+  <p id="result"></p>
+
+  <script>
+    function Extraire() {
+      var ch = document.getElementById("ch").value;
+      var C = document.getElementById("C").value;
+      for (var i = 0, n = 0; i < ch.length; i++) {
+        if (ch[i] === C) {
+          n = n + 1
+        }
+      }
+      if (n != 0) {
+        document.getElementById("result").innerHTML = C + "existe" + ch
+      }
+      else {
+        document.getElementById("result").innerHTML = C + "n'existe pas" + ch
+      }
+    }
+
+  </script>
+ -->
+
+  <h1>EXERCICE3</h1>
+  <p>Donner le caractere </p>
+  <textarea id="ch" type="text"> </textarea>
+
+  <button id="btn2" onclick="calcule()">valide</button>
+  <p id="result"></p>
+  
+  <script>
+    function calcule() {
+       var ch = document.getElementById("ch").value;
+
+      var NC = 0, NM = 0, NP = 0;
+
+      for (var i = 0 ; i < ch.length; i++) {
+        console.log("test", i)
+        if (ch[i] === " " && ch[i+1]!=".") {
+          NM =NM + 1
+         }
+        else if (ch[i] === ".") {
+          NP = NP + 1
+        }
+        else {
+          NC = NC + 1
+        }
+      } 
+        alert(   " NM = " + NM +" NP = " + NP +" NC = " + NC )
+      }
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
